@@ -12,7 +12,7 @@ def index_effective_secinfo():
 				", trading_status as status"
 				", current_room*10 as currentroom"
 				", trading_date"
-				" from ifo_sec_code c, quote.sec_info s"
+				" from ipa.ifo_sec_code c, quote.sec_info s"
 				" where trading_date = (select max(trading_date) from quote.sec_info)"
 				" and c.sec_code = s.code"
 				" and c.sec_type not in ('BOND')"
@@ -27,7 +27,7 @@ def index_effective_secinfo():
 				", trading_status as status"
 				", null as currentroom"
 				", trading_date"
-				" from ifo_derivative_code c, quote.derivative_info s"
+				" from ipa.ifo_derivative_code c, quote.derivative_info s"
 				" where trading_date = (select max(trading_date) from quote.derivative_info)"
 				" and c.derivative_code = s.code")
 

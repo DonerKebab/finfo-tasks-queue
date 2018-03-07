@@ -60,7 +60,6 @@ class ElasticSearch(object):
                     "_id": item[id_field]
                 }
             })
-            print(item)
             docs.append({
                 'symbol': item['symbol'],
                 'floorCode': item['floorcode'],

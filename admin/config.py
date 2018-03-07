@@ -20,7 +20,7 @@ class Config(object):
     ELASTICSEARCH_HOST = 'localhost'
     ELASTICSEARCH_INDEX = 'api'
 
-    SQLALCHEMY_DATABASE_URI = 'oracle://ipa:TEST123@10.26.53.10:1521/TESTDB'
+    SQLALCHEMY_DATABASE_URI = 'oracle://QUOTE:TEST123@10.26.53.10:1521/TESTDB'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     ELASTICSEARCH_CONFIG_FILE = os.path.join(APP_ROOT, '..', 'admin/es_mapping.json')
     ES_INDEXER_STRICT_MODE = True
