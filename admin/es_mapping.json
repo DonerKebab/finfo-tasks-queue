@@ -1,0 +1,389 @@
+{
+  "mappings": {
+    "market": {
+      "properties": {
+        "time": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "tradingDate": {
+          "type": "date"
+        },
+        "totalValueTraded": {
+          "type": "double"
+        },
+        "floorCode": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "indexCode": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "deri":{
+      "properties":{
+        "accumulatedVal":{
+          "type":"double"
+        },
+        "accumulatedVol":{
+          "type":"double"
+        },
+        "adjustRate":{
+          "type":"double"
+        },
+        "averagePrice":{
+          "type":"double"
+        },
+        "basicPrice":{
+          "type":"double"
+        },
+        "bidPrice01":{
+          "type":"double"
+        },
+        "bidPrice02":{
+          "type":"double"
+        },
+        "bidPrice03":{
+          "type":"double"
+        },
+        "bidQtty01":{
+          "type":"double"
+        },
+        "bidQtty02":{
+          "type":"double"
+        },
+        "bidQtty03":{
+          "type":"double"
+        },
+        "bidcount":{
+          "type":"long"
+        },
+        "buyCount":{
+          "type":"long"
+        },
+        "buyForeignQtty":{
+          "type":"double"
+        },
+        "buyForeignValue":{
+          "type":"double"
+        },
+        "ceilingPrice":{
+          "type":"double"
+        },
+        "closePrice":{
+          "type":"double"
+        },
+        "closeQtty":{
+          "type":"double"
+        },
+        "code":{
+          "type":"string",
+          "index":"not_analyzed"
+        },
+        "currentPrice":{
+          "type":"double"
+        },
+        "currentQtty":{
+          "type":"double"
+        },
+        "currentRoom":{
+          "type":"double"
+        },
+        "dateNo":{
+          "type":"double"
+        },
+        "deriCode":{
+          "type":"string",
+          "index":"not_analyzed"
+        },
+        "dividentRate":{
+          "type":"double"
+        },
+        "firstTradingDate":{
+          "type":"string"
+        },
+        "floorCode":{
+          "type":"string"
+        },
+        "floorPrice":{
+          "type":"double"
+        },
+        "highestPrice":{
+          "type":"double"
+        },
+        "indexPrice":{
+          "type":"double"
+        },
+        "lastTradingDate":{
+          "type":"string"
+        },
+        "listtingStatus":{
+          "type":"string"
+        },
+        "lowestPrice":{
+          "type":"double"
+        },
+        "matchPrice":{
+          "type":"double"
+        },
+        "matchQtty":{
+          "type":"double"
+        },
+        "matchVal":{
+          "type":"double"
+        },
+        "matchValue":{
+          "type":"double"
+        },
+        "matchVol":{
+          "type":"double"
+        },
+        "nmBuyForeignQtty":{
+          "type":"double"
+        },
+        "nmBuyForeignValue":{
+          "type":"double"
+        },
+        "nmSellForeignQtty":{
+          "type":"double"
+        },
+        "nmSellForeignValue":{
+          "type":"double"
+        },
+        "object":{
+          "type":"string"
+        },
+        "offerCount":{
+          "type":"long"
+        },
+        "offerPrice01":{
+          "type":"double"
+        },
+        "offerPrice02":{
+          "type":"double"
+        },
+        "offerPrice03":{
+          "type":"double"
+        },
+        "offerQtty01":{
+          "type":"double"
+        },
+        "offerQtty02":{
+          "type":"double"
+        },
+        "offerQtty03":{
+          "type":"double"
+        },
+        "openInterest":{
+          "type":"double"
+        },
+        "openInterestChange":{
+          "type":"double"
+        },
+        "openPrice":{
+          "type":"double"
+        },
+        "openQtty":{
+          "type":"double"
+        },
+        "prevPriorPrice":{
+          "type":"double"
+        },
+        "priorClosePrice":{
+          "type":"double"
+        },
+        "priorOpenPrice":{
+          "type":"double"
+        },
+        "priorPrice":{
+          "type":"double"
+        },
+        "projectOpen":{
+          "type":"double"
+        },
+        "ptBuyForeignQtty":{
+          "type":"double"
+        },
+        "ptBuyForeignValue":{
+          "type":"double"
+        },
+        "ptMatchPrice":{
+          "type":"double"
+        },
+        "ptMatchQtty":{
+          "type":"double"
+        },
+        "ptSellForeignQtty":{
+          "type":"double"
+        },
+        "ptSellForeignValue":{
+          "type":"double"
+        },
+        "ptTotalTradedQtty":{
+          "type":"double"
+        },
+        "ptTotalTradedValue":{
+          "type":"double"
+        },
+        "sellCount":{
+          "type":"long"
+        },
+        "sellForeignQtty":{
+          "type":"double"
+        },
+        "sellForeignValue":{
+          "type":"double"
+        },
+        "status":{
+          "type":"string"
+        },
+        "stockId":{
+          "type":"double"
+        },
+        "stockType":{
+          "type":"string"
+        },
+        "time":{
+          "type":"string",
+          "index":"not_analyzed"
+        },
+        "totalBidQtty":{
+          "type":"double"
+        },
+        "totalBuyTradingQtty":{
+          "type":"double"
+        },
+        "totalBuyTradingValue":{
+          "type":"double"
+        },
+        "totalListingQtty":{
+          "type":"double"
+        },
+        "totalOfferQtty":{
+          "type":"double"
+        },
+        "totalRoom":{
+          "type":"double"
+        },
+        "totalSellTradingQtty":{
+          "type":"double"
+        },
+        "totalSellTradingValue":{
+          "type":"double"
+        },
+        "totalTradingQtty":{
+          "type":"double"
+        },
+        "totalTradingValue":{
+          "type":"double"
+        },
+        "tradingDate":{
+          "type":"date",
+          "format":"dateOptionalTime"
+        },
+        "tradingSessionId":{
+          "type":"string"
+        },
+        "tradingUnit":{
+          "type":"double"
+        },
+        "underlying":{
+          "type":"string"
+        }
+      }
+    },
+    "stock":{
+      "properties":{
+        "accumulatedVal":{
+          "type":"double"
+        },
+        "accumulatedVol":{
+          "type":"double"
+        },
+        "floorCode":{
+          "type":"string",
+          "index":"not_analyzed"
+        },
+        "highest":{
+          "type":"double"
+        },
+        "last":{
+          "type":"double"
+        },
+        "lastVol":{
+          "type":"double"
+        },
+        "lowest":{
+          "type":"double"
+        },
+        "stockId":{
+          "type":"double"
+        },
+        "symbol":{
+          "type":"string",
+          "index":"not_analyzed"
+        },
+        "time":{
+          "type":"string",
+          "index":"not_analyzed"
+        },
+        "tradingDate":{
+          "type":"date",
+          "format":"dateOptionalTime"
+        }
+      }
+    },
+    "trade": {
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "tradingDate": {
+          "type": "date"
+        },
+        "time":{
+          "type":"string",
+          "index":"not_analyzed"
+        }
+      }
+    },
+    "trade_newest": {
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "tradingDate": {
+          "type": "date"
+        },
+        "time":{
+          "type":"string",
+          "index":"not_analyzed"
+        }
+      }
+    },
+    "effective_secinfo": {
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "type": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "floorCode": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "floorCode": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    }
+  }
+}
