@@ -2,6 +2,10 @@ from ..core import db, es
 
 
 def index_effective_secinfo():
+	# delete all docments with type effective_secinfo
+	es.delete_doctype("effective_secinfo")
+
+	# index all documents
 	query = ("select s.code as symbol"
 			", DECODE(s.floor_code,'10','HOSE','02','HNX','03','UPCOM') as floorcode"
 			", DECODE(c.sec_type,'STOCK','ST','IFC','FC','BOND','BO','ETF','ET',c.sec_type) as type"
@@ -33,3 +37,4 @@ def index_effective_secinfo():
 	result = db.engine.execute(query)
 		
 	es.publish_effective_secinfo(result, 'effective_secinfo', 'symbol')
+	

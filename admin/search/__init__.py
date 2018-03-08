@@ -77,3 +77,13 @@ class ElasticSearch(object):
                 docs[:] = []
         if docs:
             es.bulk(index=es_index, body=docs)
+
+    def delete_doctype(self, _type):
+        """
+        Delete all document from a specific index based on _type.
+        """
+        index = current_app.config['ELASTICSEARCH_INDEX']
+        es = current_app.extensions['elasticsearch']
+
+        es.delete_by_query(index=index, doc_type=_type, body='{"query": {"match_all": {}}}')
+
