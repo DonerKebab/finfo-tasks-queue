@@ -379,7 +379,7 @@
           "type": "string",
           "index": "not_analyzed"
         },
-        "floorCode": {
+        "status": {
           "type": "string",
           "index": "not_analyzed"
         }

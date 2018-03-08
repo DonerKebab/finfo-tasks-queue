@@ -19,12 +19,14 @@ class Config(object):
     ELASTICSEARCH_PORT = 9200 
     ELASTICSEARCH_HOST = 'localhost'
     ELASTICSEARCH_INDEX = 'api'
+    ES_INDEXER_STRICT_MODE = True
+    BULK_MAX = 300
 
     SQLALCHEMY_DATABASE_URI = 'oracle://QUOTE:TEST123@10.26.53.10:1521/TESTDB'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     ELASTICSEARCH_CONFIG_FILE = os.path.join(APP_ROOT, '..', 'admin/es_mapping.json')
-    ES_INDEXER_STRICT_MODE = True
-    BULK_MAX = 300
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
 
     config_data = ''
     with open(ELASTICSEARCH_CONFIG_FILE) as f:
@@ -40,7 +42,7 @@ class Config(object):
     CELERYBEAT_SCHEDULE = {
         'index_effective-secinfo': {
             'task': 'admin.tasks.index_effective',
-            'schedule': crontab(minute='*/1', hour='8-17', day_of_week='mon-fri'),  # Executes every minute from 8am-17pm from monday to friday
+            'schedule': crontab(minute='*/1', hour='8,9,10,11,12,13,14,15,16,17', day_of_week='mon,tue,wed,thu,fri'),  # Executes every minute from 8am-17pm from monday to friday
         }
     }
     CELERY_IMPORTS = ("admin.tasks",)

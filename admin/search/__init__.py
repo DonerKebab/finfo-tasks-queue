@@ -44,7 +44,7 @@ class ElasticSearch(object):
         # create or udpate index
         es.indices.create(index=index, ignore=400, body=config)
 
-    def publish(self, query, _type, id_field):
+    def publish_effective_secinfo(self, query, _type, id_field):
         docs = []
         bulk_max = current_app.config['BULK_MAX']
         es = current_app.extensions['elasticsearch']
@@ -67,7 +67,7 @@ class ElasticSearch(object):
                 'basic': item['basic'],
                 'ceil': item['ceil'],
                 'floor': item['floor'],
-                'price': item['match'],
+                'match': item['match'],
                 'status': item['status'],
                 'currentRoom': item['currentroom'],
                 'tradingDate': item['trading_date'] })
